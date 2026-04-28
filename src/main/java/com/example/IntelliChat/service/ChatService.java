@@ -24,10 +24,10 @@ public class ChatService {
             reply = "Please enter a valid message.";
         }
         else if (msg.equals("hi") || msg.equals("hello")) {
-            reply = "Hello 👋 How can I help you?";
+            reply = "Hello How can I help you?";
         }
         else if (msg.equals("bye")) {
-            reply = "Goodbye 👋";
+            reply = "Goodbye";
         }
         else if (msg.contains("java")) {
             reply = "Java is a programming language used to build applications.";
@@ -42,7 +42,7 @@ public class ChatService {
             reply = "Today's date: " + LocalDateTime.now().toLocalDate();
         }
         else if (msg.contains("name") || msg.contains("who")) {
-            reply = "I am IntelliChat, your what's app chatbot 🤖";
+            reply = "I am IntelliChat, your what's app chatbot ";
         }
         else if (msg.contains("help")) {
             reply = "Try: hi, bye, java, spring, time, date";
