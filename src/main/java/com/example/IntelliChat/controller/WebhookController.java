@@ -22,7 +22,6 @@ public class WebhookController {
     @PostMapping
     public String receiveMessage(@RequestBody MessageRequest request) {
 
-        // Log incoming message
         logger.info("Incoming message: {}", request.getMessage());
 
         if (request.getMessage() == null || request.getMessage().isEmpty()) {
@@ -31,8 +30,6 @@ public class WebhookController {
         }
 
         String response = chatService.getReply(request.getMessage());
-
-        // Log response
         logger.info("Bot response: {}", response);
 
         return response;
